@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "npm run lint",
+    "test": "yarn run lint",
     "lint": "eslint *.js **/*.js"
   },
   "repository": {
