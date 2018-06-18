@@ -1,0 +1,33 @@
+{
+  "name": "ebates.github.io",
+  "version": "1.0.0",
+  "description": "ebates open source",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebates-edc/ebates.github.io.git"
+  },
+  "keywords": [
+    "ebates",
+    "open",
+    "source"
+  ],
+  "author": "Ebates",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ebates-edc/ebates.github.io/issues"
+  },
+  "homepage": "https://github.com/ebates-edc/ebates.github.io#readme",
+  "private": true,
+  "dependencies": {
+    "next": "^6.0.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
