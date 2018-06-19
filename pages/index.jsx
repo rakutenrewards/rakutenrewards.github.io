@@ -1,11 +1,17 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class extends React.Component {
-  static async getInitialProps() {
-    // Do some stuff ehre
-    return {};
+  constructor(props) {
+    super(props);
+    this.state = {};
   }
-
+  componentDidMount() {
+    axios.get('https://api.github.com/users/ebates-inc/repos').then((data) => {
+      console.log(data);
+    });
+  }
+  
   render() {
     // TODO: Make hero its own component
 
@@ -18,10 +24,10 @@ export default class extends React.Component {
         <div className="hero-body">
           <div className="container">
             <h1 className="title">
-              Ebates
+              Open Source @ Ebates
             </h1>
             <h2 className="subtitle">
-              Primary subtitle
+              A Rakuten company
             </h2>
           </div>
         </div>
