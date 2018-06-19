@@ -7,10 +7,25 @@ export default class extends React.Component {
   }
 
   render() {
+    // TODO: Make hero its own component
+
+    const heroBackground = {
+      background: 'url(//static.ebates.com/images/help/help-center/hero-bg.jpg) repeat 0 0',
+    };
+
     return (
-      <div>
-        Hio
-      </div>
+      <section className="hero is-success" style={heroBackground}>
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">
+              Ebates
+            </h1>
+            <h2 className="subtitle">
+              Primary subtitle
+            </h2>
+          </div>
+        </div>
+      </section>
     );
   }
 }
