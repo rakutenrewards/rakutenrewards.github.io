@@ -1,6 +1,7 @@
 import App, { Container } from 'next/app';
 import React from 'react';
 import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default class MyApp extends App {
   render() {
@@ -8,7 +9,10 @@ export default class MyApp extends App {
     return (
       <Container>
         <Navbar />
-        <Component {...pageProps} />
+        <main>
+          <Component {...pageProps} />
+        </main>
+        <Footer />
       </Container>
     );
   }

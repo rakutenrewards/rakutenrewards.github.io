@@ -1,0 +1,32 @@
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+$gap: 151;
+
+@import "../node_modules/bulma/bulma";
+
+#__next {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/static/fonts/ProximaNova-Reg-webfont.woff);
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/static/fonts/ProximaNova-Sbold-webfont.woff);
+  font-weight: bold;
+}

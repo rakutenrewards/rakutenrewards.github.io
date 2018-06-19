@@ -47,6 +47,12 @@ export default class extends React.Component {
                 <a className="navbar-item" href="/">
                   Home
                 </a>
+                <a className="navbar-item" href="https://github.com/ebates-inc">
+                  GitHub
+                </a>
+                <a className="navbar-item" href="https://www.ebates.com/">
+                  Ebates.com
+                </a>
               </div>
             </div>
           </div>
