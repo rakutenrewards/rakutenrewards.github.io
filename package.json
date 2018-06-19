@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "test": "yarn run lint",
-    "lint": "eslint *.js **/*.js",
+    "lint": "eslint *.js **/*.js **/*.jsx",
     "deploy": "echo \"deploy here\""
   },
   "repository": {
@@ -28,7 +28,10 @@
   "homepage": "https://github.com/ebates-edc/ebates.github.io#readme",
   "private": true,
   "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "bulma": "^0.7.1",
     "next": "^6.0.3",
+    "node-sass": "^4.9.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
