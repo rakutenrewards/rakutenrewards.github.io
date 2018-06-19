@@ -11,7 +11,7 @@ export default class extends React.Component {
       console.log(data);
     });
   }
-  
+
   render() {
     // TODO: Make hero its own component
 
