@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.ebates.com" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/ebates-inc/ebates-inc.github.io/develop/static/images/readme-logo.png">
+    <img src="https://raw.githubusercontent.com/ebates-inc/ebates-inc.github.io/develop/static/images/readme-logo.png" width="250">
   </a>
 </p>
 <p align="center">
