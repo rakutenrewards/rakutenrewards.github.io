@@ -1,0 +1,32 @@
+// set the container width to the same as ebates.com
+$gap: 151;
+
+// import bulma
+@import "../node_modules/bulma/bulma";
+
+// push the footer to the bottom
+#__next {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+// set the font to the ebates font
+body {
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/static/fonts/ProximaNova-Reg-webfont.woff);
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/static/fonts/ProximaNova-Sbold-webfont.woff);
+  font-weight: bold;
+}

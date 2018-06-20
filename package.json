@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn run lint",
+    "lint": "eslint *.js **/*.js **/*.jsx",
+    "deploy": "echo \"deploy here\""
   },
   "repository": {
     "type": "git",
@@ -26,8 +28,20 @@
   "homepage": "https://github.com/ebates-edc/ebates.github.io#readme",
   "private": true,
   "dependencies": {
+    "@zeit/next-sass": "^0.2.0",
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
     "next": "^6.0.3",
+    "node-sass": "^4.9.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "webpack": "^3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1"
   }
 }
