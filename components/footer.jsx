@@ -31,7 +31,7 @@ export default () => {
           <div className="column">
             <a href="https://www.ebates.com/help/other-questions" target="_blank" rel="noopener noreferrer" style={footerLink}>Contact Us</a>
           </div>
-          <div className="column is-2" />
+          <div className="column is-1" />
           <div className="column">
             &copy; 2018 Ebates Inc.
           </div>
