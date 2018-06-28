@@ -4,7 +4,9 @@
   </a>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/travis/ebates-inc/ebates-inc.github.io/develop.svg">
+  <a href="https://travis-ci.org/ebates-inc/ebates-inc.github.io" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/travis/ebates-inc/ebates-inc.github.io/develop.svg">
+  </a>
 </p>
 
 <h1 align="center">Ebates's Open Source Homepage</h1>
