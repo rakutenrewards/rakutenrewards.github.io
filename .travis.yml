@@ -25,5 +25,6 @@ deploy:
   local-dir: out
   keep-history: true
   target-branch: master
+  fqdn: opensource.ebates.com
   on:
     branch: develop
