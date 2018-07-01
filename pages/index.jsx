@@ -9,6 +9,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       repos: [],
     };
   }
@@ -45,7 +46,11 @@ export default class extends React.Component {
 
     // update the state to the repos
     this.setState((prevState) => {
-      const newState = Object.assign({}, prevState, { repos });
+      const newState = {
+        ...prevState,
+        repos,
+        loading: false,
+      };
       return newState;
     });
   }
@@ -105,6 +110,12 @@ export default class extends React.Component {
       });
     }
 
+    const loading = (
+      <div className="has-text-centered" style={{ width: '100%' }}>
+        <button className="button is-loading repos-spinner is-large" style={{ border: '0px' }}>Loading</button>
+      </div>
+    );
+
     return (
       <div>
         {/* set the background of the hero */}
@@ -130,7 +141,7 @@ export default class extends React.Component {
           <div className="container">
             <div className="columns is-multiline">
               {/* show the repo cards */}
-              {repoCards}
+              { (this.state.loading) ? loading : repoCards}
             </div>
           </div>
         </section>

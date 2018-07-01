@@ -30,3 +30,15 @@ body {
   src: url(/static/fonts/ProximaNova-Sbold-webfont.woff);
   font-weight: bold;
 }
+.button.is-loading.repos-spinner::after {
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #23ae4a;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
