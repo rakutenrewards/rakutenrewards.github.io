@@ -20,7 +20,7 @@ export default class extends React.Component {
     try {
       const request = await axios.get('https://api.github.com/users/ebates-inc/repos');
       // extract the required information
-      request.data.forEach((repo) => {
+      request.data.filter(repo => !repo.fork).forEach((repo) => {
         const struct = {
           key: repo.name,
           language: repo.language,
