@@ -2,8 +2,8 @@
 /* global localStorage */
 import React from 'react';
 import axios from 'axios';
-import '../styles/main.scss';
 import GranimCanvas from 'react-granim-canvas';
+import '../styles/main.scss';
 
 export default class extends React.Component {
   // initialize state
@@ -28,7 +28,7 @@ export default class extends React.Component {
         license: (repo.license) ? repo.license.spdx_id : null,
       };
       return struct;
-    }
+    };
 
     // try to fetech repos from github
     let repos = [];
@@ -47,8 +47,8 @@ export default class extends React.Component {
       localStorage.setItem('repos', JSON.stringify(repos));
     } catch (err) {
       // something went wrong
-      console.log('GitHub API fetch failed, getting repos from local storage');
-      console.error(err);
+      // console.log('GitHub API fetch failed, getting repos from local storage');
+      // console.error(err);
       // attempt to fetch the repos out of the localstorage
       repos = JSON.parse(localStorage.getItem('repos')) || [];
     }
@@ -121,12 +121,12 @@ export default class extends React.Component {
     );
 
     const states = {
-      "default-state": {
+      'default-state': {
         gradients: [
           ['#FE9C7B', '#A30593'],
-          ['#311293', '#20A1E6']
+          ['#311293', '#20A1E6'],
         ],
-        transitionSpeed: 2000
+        transitionSpeed: 2000,
       },
     };
 
