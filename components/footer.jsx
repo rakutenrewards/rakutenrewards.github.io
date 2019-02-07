@@ -17,23 +17,23 @@ export default () => {
       <div className="container">
         <div className="columns has-text-centered">
           <div className="column">
-            <a href="https://www.ebates.com" target="_blank" rel="noopener noreferrer" style={footerLink}>Ebates.com</a>
+            <a href="https://www.rakuten.com" target="_blank" rel="noopener noreferrer" style={footerLink}>Rakuten.com</a>
           </div>
           <div className="column">
-            <a href="https://www.ebates.com/help/article/company-information-115009254588" target="_blank" rel="noopener noreferrer" style={footerLink}>About Ebates</a>
+            <a href="https://www.rakuten.com/our-company" target="_blank" rel="noopener noreferrer" style={footerLink}>About Ebates</a>
           </div>
           <div className="column">
-            <a href="https://www.ebates.com/help/article/terms-conditions-115009325528" target="_blank" rel="noopener noreferrer" style={footerLink}>Terms & Conditions</a>
+            <a href="https://www.rakuten.com/terms_and_conditions" target="_blank" rel="noopener noreferrer" style={footerLink}>Terms & Conditions</a>
           </div>
           <div className="column">
-            <a href="https://www.ebates.com/help/article/privacy-policy-115009657667" target="_blank" rel="noopener noreferrer" style={footerLink}>Privacy Policy</a>
+            <a href="https://www.rakuten.com/privacy_policy" target="_blank" rel="noopener noreferrer" style={footerLink}>Privacy Policy</a>
           </div>
           <div className="column">
-            <a href="https://www.ebates.com/help/other-questions" target="_blank" rel="noopener noreferrer" style={footerLink}>Contact Us</a>
+            <a href="https://www.rakuten.com/help/other-questions" target="_blank" rel="noopener noreferrer" style={footerLink}>Contact Us</a>
           </div>
           <div className="column is-1" />
           <div className="column">
-            &copy; 2018 Ebates Inc.
+            &copy; 2019 Rakuten Inc.
           </div>
         </div>
       </div>

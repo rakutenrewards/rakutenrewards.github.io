@@ -3,6 +3,7 @@
 import React from 'react';
 import axios from 'axios';
 import '../styles/main.scss';
+import GranimCanvas from 'react-granim-canvas';
 
 export default class extends React.Component {
   // initialize state
@@ -15,24 +16,32 @@ export default class extends React.Component {
   }
 
   async componentDidMount() {
+    const repoToDataStruct = (repo) => {
+      const struct = {
+        key: repo.name,
+        language: repo.language,
+        stars: repo.stargazers_count,
+        forks: repo.forks_count,
+        name: repo.name,
+        description: repo.description,
+        url: repo.html_url,
+        license: (repo.license) ? repo.license.spdx_id : null,
+      };
+      return struct;
+    }
+
     // try to fetech repos from github
     let repos = [];
     try {
       const request = await axios.get('https://api.github.com/users/ebates-inc/repos');
       // extract the required information
       request.data.filter(repo => !repo.fork).forEach((repo) => {
-        const struct = {
-          key: repo.name,
-          language: repo.language,
-          stars: repo.stargazers_count,
-          forks: repo.forks_count,
-          name: repo.name,
-          description: repo.description,
-          url: repo.html_url,
-          license: (repo.license) ? repo.license.spdx_id : null,
-        };
+        const struct = repoToDataStruct(repo);
         repos.push(struct);
       });
+
+      const requestGql = await axios.get('https://api.github.com/repos/ekampf/gql');
+      repos.push(repoToDataStruct(requestGql.data));
 
       // set the localstorage to the repos in case the request fails next time
       localStorage.setItem('repos', JSON.stringify(repos));
@@ -56,11 +65,6 @@ export default class extends React.Component {
   }
 
   render() {
-    // set the url to ebates background
-    const heroBackground = {
-      background: 'url(/static/images/hero-bg.jpg) repeat 0 0',
-    };
-
     // iterate over the repos and generate a card for each one
     let repoCards;
     if (this.state.repos) {
@@ -116,10 +120,21 @@ export default class extends React.Component {
       </div>
     );
 
+    const states = {
+      "default-state": {
+        gradients: [
+          ['#FE9C7B', '#A30593'],
+          ['#311293', '#20A1E6']
+        ],
+        transitionSpeed: 2000
+      },
+    };
+
     return (
       <div>
         {/* set the background of the hero */}
-        <section className="hero is-success" style={heroBackground}>
+        <section className="hero">
+          <GranimCanvas states={states} />
           <div className="hero-body has-text-centered">
             <div className="container">
               <h1 className="title">

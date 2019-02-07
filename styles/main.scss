@@ -20,6 +20,13 @@ body {
   font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
 }
 
+.hero {
+  position: relative;
+  .hero-body {
+    .title, .subtitle { color:white; }
+  }  
+}
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url(/static/fonts/ProximaNova-Reg-webfont.woff);
