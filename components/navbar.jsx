@@ -23,7 +23,7 @@ export default class extends React.Component {
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item" href="/">
-                <img src="/static/images/rakuten_nav_black.svg" alt="Ebates Open Source" width="112" height="28" />
+                <img src="/static/images/rakuten_nav_black.svg" alt="Rakuten Open Source" width="112" height="28" />
               </a>
               <div
                 className={[

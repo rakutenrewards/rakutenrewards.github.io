@@ -138,7 +138,7 @@ export default class extends React.Component {
           <div className="hero-body has-text-centered">
             <div className="container">
               <h1 className="title">
-                Open Source @ Ebates
+                Open Source @ Rakuten
               </h1>
               <h2 className="subtitle is-size-4">
                 Ebates is built on top of many open source technologies.

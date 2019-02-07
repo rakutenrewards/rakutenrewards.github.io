@@ -20,7 +20,7 @@ export default () => {
             <a href="https://www.rakuten.com" target="_blank" rel="noopener noreferrer" style={footerLink}>Rakuten.com</a>
           </div>
           <div className="column">
-            <a href="https://www.rakuten.com/our-company" target="_blank" rel="noopener noreferrer" style={footerLink}>About Ebates</a>
+            <a href="https://www.rakuten.com/our-company" target="_blank" rel="noopener noreferrer" style={footerLink}>About Rakuten</a>
           </div>
           <div className="column">
             <a href="https://www.rakuten.com/terms_and_conditions" target="_blank" rel="noopener noreferrer" style={footerLink}>Terms & Conditions</a>
