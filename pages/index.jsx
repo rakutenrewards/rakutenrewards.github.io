@@ -126,7 +126,7 @@ export default class extends React.Component {
           ['#FE9C7B', '#A30593'],
           ['#311293', '#20A1E6'],
         ],
-        transitionSpeed: 2000,
+        transitionSpeed: 4000,
       },
     };
 
