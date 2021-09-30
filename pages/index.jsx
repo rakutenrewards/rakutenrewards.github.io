@@ -33,7 +33,7 @@ export default class extends React.Component {
     // try to fetech repos from github
     let repos = [];
     try {
-      const request = await axios.get('https://api.github.com/users/ebates-inc/repos');
+      const request = await axios.get('https://api.github.com/users/rakutenrewards/repos');
       // extract the required information
       request.data.filter(repo => !repo.fork).forEach((repo) => {
         const struct = repoToDataStruct(repo);

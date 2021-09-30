@@ -25,6 +25,6 @@ deploy:
   local-dir: out
   keep-history: true
   target-branch: master
-  fqdn: opensource.ebates.com
+  fqdn: rakutenrewards.github.io
   on:
     branch: develop

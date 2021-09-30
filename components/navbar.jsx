@@ -47,7 +47,7 @@ export default class extends React.Component {
                 <a className="navbar-item" href="/">
                   Home
                 </a>
-                <a className="navbar-item" href="https://github.com/ebates-inc">
+                <a className="navbar-item" href="https://github.com/rakutenrewards">
                   GitHub
                 </a>
                 <a className="navbar-item" href="https://www.rakuten.com/">
