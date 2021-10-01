@@ -43,7 +43,7 @@ jobs:
         run: CI=true yarn build
 
       - name: Create supporting GH Pages files
-        run:
+        run: |
           touch out/.nojekyll
           echo "rakutenrewards.github.io" > out/CNAME
 
