@@ -8,7 +8,7 @@
     "build": "next build && next export",
     "start": "next start",
     "test": "yarn run lint",
-    "lint": "eslint *.js **/*.js **/*.jsx",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "deploy": "echo \"deploy here\""
   },
   "repository": {

@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          # TODO: once deps are updated, will need to change to later LTS version, like v16
+          node-version: '8'
+
+      - name: Install dependencies
+        run:  yarn install --frozen-lockfile
+
+      - name: Run lint
+        run: yarn lint
+
+      # - name: Run eslint
+      #   uses: reviewdog/action-eslint@v1
+      #   with:
+      #     reporter: github-check
+      #     filter_mode: nofilter
+      #     eslint_flags: '--ext .js,.ts,.tsx . --max-warnings 0'
+
+      # - name: Run unit tests
+      #   uses: mattallty/jest-github-action@v1.0.3
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     test-command: "yarn test:ci"
+      #     coverage-comment: false
+
+      - name: Create build
+        run: CI=true yarn build
+
+      - name: Create supporting GH Pages files
+        run:
+          touch out/.nojekyll
+          echo "rakutenrewards.github.io" > out/CNAME
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: main
+          folder: out
