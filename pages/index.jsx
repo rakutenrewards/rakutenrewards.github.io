@@ -141,7 +141,7 @@ export default class extends React.Component {
                 Open Source @ Rakuten Rewards
               </h1>
               <h2 className="subtitle is-size-4">
-                Ebates is built on top of many open source technologies.
+                Rakuten Rewards is built on top of many open source technologies.
                 Here are some of the tools and libraries we have developed
                 to give back to the community.
               </h2>
